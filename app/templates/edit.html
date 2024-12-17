@@ -1,0 +1,22 @@
+{% extends 'tempfiles/base.html' %}
+{% block content %}
+<br><br><br>
+    <div >
+       <button class="frosted-glass-btn">EDIT</button> <br><br><br>
+    </div> <br><br><br>
+<div>
+    <form action="" method="POST">
+        <table>
+     {% csrf_token%}
+     <th><label for="">TASK</label></th>
+      <th><label for="">DESCRIPTION</label></th>
+      <tr><td><input class="task" type="text" name="task" id="" value="{{data.task}}"></td>
+     <td><input  class="task" type="text" name="description" id="" value="{{data.description}}"> </td></tr>
+    </table>
+    <br><br><br><br>
+    <div>
+     <button type="submit" >SUBMIT</button>
+    </div>
+    </form>
+ </div>
+{% endblock content%}

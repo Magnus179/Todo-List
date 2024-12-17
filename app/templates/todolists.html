@@ -1,0 +1,24 @@
+{% extends 'tempfiles/base.html' %}
+{% block content %}
+<br><br><br>
+<div >
+   <button class="frosted-glass-btn">INDIVIDUAL TASK DETAILS</button> <br><br><br>
+</div> <br><br><br>
+<div style="align-items: center;">
+<table border="2px" heigth="500px" width="600px" cellpadding="2px" cellspacing="2px" class="ind-details">
+   
+    <tr><td><h2>Task : {{data.task}}</h2></td>
+    <tr><td><h3> Description : {{data.description}}</h3></td></tr>
+    
+</table>
+</div>
+<br><br><br>
+<div id="eee">
+    <a href="{% url 'edit' data.id%}">EDIT</a>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="MARK AS READ" class="mark">
+    </form>
+</div>
+
+{% endblock content%}

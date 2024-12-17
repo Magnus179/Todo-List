@@ -1,0 +1,51 @@
+div{
+    
+    display: flex;
+    justify-content: center;
+}
+.frosted-glass-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #277aa7;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+  }
+  
+.frosted-glass-btn:hover {
+    background-color: rgba(53, 55, 55, 0.2);
+    /* border: 2px solid; */
+  }
+
+.task{
+    height: 50px;
+    width: 500px;
+    font-weight: 600;
+    padding: 12px; 
+    margin: 10px 0; 
+    background-color: #ffff;
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    font-size: 16px; 
+    color: #2d3436; 
+    font-family: 'Arial', sans-serif; 
+    transition: background-color 0.3s ease, border 0.3s ease; 
+    backdrop-filter: blur(10px); 
+
+}
+
+.submit{
+    align-content: center;
+    border-radius: 8px;
+    height: 50px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}

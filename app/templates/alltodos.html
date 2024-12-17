@@ -1,0 +1,23 @@
+{% extends 'tempfiles/base.html'%}
+{% block content %}
+<br><br><br>
+    <div >
+       <button class="frosted-glass-btn">ALL TASKS</button> <br><br><br>
+    </div> <br><br><br>
+   
+
+
+<div>
+    <table border="2px" heigth="500px" width="600px" cellpadding="5px" cellspacing="2px" class="all">
+        
+        <th>Task</th>
+        {% for i in data %}
+        <tr>
+            <th>{{i.task}} - - - > <a href="{% url 'todolists' i.id %}"><i>Click here for Details</i></a></th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+{% endblock content%}

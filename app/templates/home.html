@@ -1,0 +1,29 @@
+{% extends 'tempfiles/base.html' %}
+{% block content %}
+    <br><br><br>
+    <div >
+       <button class="frosted-glass-btn">TO DO LIST</button> <br><br><br>
+    </div> <br><br><br>
+    <div>
+       <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+         <tr>
+        <th><label for="">TASK</label></th>
+        <th><label for="">DESCRIPTION</label> </th>
+        <tr>
+         <td><input class="task" type="text" name="task"  placeholder="Add the task your going to do..!" required></td>
+         
+         <td> <input  class="task" type="text" name="description" id="" placeholder="Describe the task that you are going to perform..!" required></td>
+         
+      </table>
+      <br><br><br><br>
+      <div>
+      <button type="submit"  class="submit">SUBMIT</button>
+      </div>
+       </form>
+    </div>
+{% endblock content %}
+
+       
+       

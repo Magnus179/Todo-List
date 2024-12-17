@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'app-css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="nav">
+            <div id="subnav">
+                <a href="{% url 'home' %}" class="home">HOME</a>
+                <a href="{% url 'alltodos' %}" class="home">TO DO LIST</a>
+                <a href="{% url 'read' %}" class="home">HISTORY</a>
+                <a href="" class="home">CONTACT</a>
+            </div>
+            <article id="nav-art">
+                {% if update == True %}
+                    <form action="" method="POST" id="nav_search">
+                        {% csrf_token %}
+                        <input type="text" name="search" class="search1" placeholder="Search for tasks">
+                        <button type="submit" id="search1-btn">Search</button>
+                    </form>
+            </article>
+            {% endif %}
+    </section>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
