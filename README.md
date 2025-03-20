@@ -10,11 +10,8 @@ A To-Do List application built with Django allows users to manage tasks effectiv
 <h3><b> Task Creation View </b></h3>
   A structured form to create new tasks with fields for:
   <ul>
-    <li>
-      Title</li>
-    <li>
-      Description
-    </li>
+    <li>Title</li>
+    <li>Description</li>
   </ul>
   
 <h3><b> Task Detail View </b></h3>
